@@ -12,12 +12,12 @@ export interface User {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  profileForm = new FormGroup({
+  public profileForm = new FormGroup({
     firstName: new FormControl('', Validators.required),
     lastName: new FormControl('', Validators.required),
   });
 
-  users: User[] = [];
+  public users: User[] = [];
 
   onSubmit() {
     const fN = this.profileForm.value.firstName;
