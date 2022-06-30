@@ -1,0 +1,29 @@
+
+<h3>People</h3>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <input id="first-name" type="text" formControlName="firstName" placeholder="First Name">
+  <input id="last-name" type="text" formControlName="lastName"placeholder="Last Name">
+  <button type="submit" [disabled]="!profileForm.valid">Add</button>
+</form>
+
+<table>
+  <thead>
+      <tr>
+          <th>First</th>
+          <th>Last</th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngIf="users.length === 0" class="nouser">
+        <td colspan="3">No user</td>
+      </tr>
+      <tr *ngFor="let user of users; let i = index" [attr.data-index]="i">
+          <td>{{user.firstName}}</td>
+          <td>{{user.lastName}}</td>
+          <td>
+            <button (click)="deleteUser(i)">Delete</button>
+          </td>
+      </tr>
+  </tbody>
+</table> 

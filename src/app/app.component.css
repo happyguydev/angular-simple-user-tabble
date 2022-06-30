@@ -1,0 +1,28 @@
+form > :not(:first-child) {
+  margin-left: 10px;
+}
+
+table {
+  margin-top: 15px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table thead th {
+  border-bottom: 1px solid lightgray;
+  padding: 8px 8px 8px 0;
+  width: 30%;
+  text-align: left;
+}
+
+table tbody tr:hover {
+  background-color: lightgray;
+}
+
+table tbody td {
+  padding: 8px 8px 8px 0;
+}
+
+table tbody tr.nouser:hover {
+  background-color: transparent;
+}
